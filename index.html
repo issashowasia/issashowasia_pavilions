@@ -58,6 +58,27 @@
             page-break-inside: avoid;
         }
 
+        .apply-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 6px 12px;
+            border-radius: 9999px;
+            background-color: #91C322;
+            color: #ffffff;
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            text-decoration: none;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+            transition: background-color 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .apply-btn:hover {
+            background-color: #7faa1d;
+        }
+
         @media screen {
             body {
                 background: #e2e8f0;
@@ -126,6 +147,11 @@
                 font-size: 10px !important;
                 line-height: 1.5 !important;
             }
+
+            .mobile-apply {
+                padding: 6px 10px !important;
+                font-size: 9px !important;
+            }
         }
 
         @page {
@@ -191,21 +217,22 @@
 
         <main class="flex-grow px-6 pt-3 z-20 mobile-pad">
             <!-- Overview -->
-            <section class="bg-white rounded-2xl shadow-lg border border-slate-200 p-4 mb-4 relative keep-together">
-                <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-t-2xl"></div>
+            <section class="bg-white rounded-2xl shadow-lg border border-slate-200 p-4 mb-4 overflow-hidden keep-together">
+                <div class="-mx-4 -mt-4 mb-3 h-[3px] md:h-1 bg-gradient-to-r from-blue-500 to-purple-500"></div>
 
-                <div class="flex items-center justify-between mb-3">
+                <div class="flex items-center justify-between mb-3 gap-3">
                     <div>
                         <h3 class="text-sm font-bold uppercase tracking-widest text-slate-700">
                             Overview <span class="text-[9px] md:text-[10px] font-normal normal-case tracking-normal text-slate-400 ml-1">행사 개요</span>
                         </h3>
                     </div>
-                    <div class="w-7 h-7 rounded-full bg-slate-100 flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-slate-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M3 12h18"></path>
-                            <path d="M12 3v18"></path>
-                        </svg>
-                    </div>
+
+                    <a href="https://issashowasia.com/exhibit/how-to-exhibit/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="apply-btn mobile-apply">
+                        Go to Apply
+                    </a>
                 </div>
 
                 <div class="grid grid-cols-2 gap-2.5 mobile-grid-1 mobile-gap text-[11px] mobile-text-sm">
